@@ -9,10 +9,32 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // MARK: - Outlets
+
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
+        setupHierrarchy()
+        setupLayout()
     }
 
+    // MARK: - Setup
+    private func setupView() {
+
+    }
+
+    private func setupHierrarchy() {
+
+    }
+
+    private func setupLayout() {
+
+    }
+
+    // MARK: - Actions
+
+    // MARK: - Extension
 
 }
 
