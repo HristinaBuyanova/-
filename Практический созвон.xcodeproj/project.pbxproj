@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6E2EC4FE2ADA8CD5006697D2 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6E2EC4FD2ADA8CD5006697D2 /* SnapKit */; };
+		6E3CDFC42ADAEA650066FB90 /* GTWalsheimPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E3CDFC32ADAEA650066FB90 /* GTWalsheimPro-Regular.ttf */; };
+		6E3CDFC62ADAEA7F0066FB90 /* GTWalsheimPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E3CDFC52ADAEA7F0066FB90 /* GTWalsheimPro-Bold.ttf */; };
 		6E5E36CA2ADA8AB700F4D6FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5E36C92ADA8AB700F4D6FB /* AppDelegate.swift */; };
 		6E5E36CC2ADA8AB700F4D6FB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5E36CB2ADA8AB700F4D6FB /* SceneDelegate.swift */; };
 		6E5E36CE2ADA8AB700F4D6FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5E36CD2ADA8AB700F4D6FB /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6E3CDFC32ADAEA650066FB90 /* GTWalsheimPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GTWalsheimPro-Regular.ttf"; sourceTree = "<group>"; };
+		6E3CDFC52ADAEA7F0066FB90 /* GTWalsheimPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GTWalsheimPro-Bold.ttf"; sourceTree = "<group>"; };
 		6E5E36C62ADA8AB700F4D6FB /* Практический созвон.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Практический созвон.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E5E36C92ADA8AB700F4D6FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E5E36CB2ADA8AB700F4D6FB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,11 +61,21 @@
 		6E2EC5012ADA8EB8006697D2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6E3CDFC22ADAEA200066FB90 /* Fonts */,
 				6E5E36D22ADA8AB900F4D6FB /* Assets.xcassets */,
 				6E5E36D42ADA8AB900F4D6FB /* LaunchScreen.storyboard */,
 				6E5E36D72ADA8AB900F4D6FB /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		6E3CDFC22ADAEA200066FB90 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				6E3CDFC52ADAEA7F0066FB90 /* GTWalsheimPro-Bold.ttf */,
+				6E3CDFC32ADAEA650066FB90 /* GTWalsheimPro-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		6E5E36BD2ADA8AB700F4D6FB = {
@@ -155,6 +169,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E5E36D62ADA8AB900F4D6FB /* LaunchScreen.storyboard in Resources */,
+				6E3CDFC42ADAEA650066FB90 /* GTWalsheimPro-Regular.ttf in Resources */,
+				6E3CDFC62ADAEA7F0066FB90 /* GTWalsheimPro-Bold.ttf in Resources */,
 				6E5E36D32ADA8AB900F4D6FB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,8 +328,8 @@
 				INFOPLIST_FILE = "Практический созвон/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -339,8 +355,8 @@
 				INFOPLIST_FILE = "Практический созвон/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
