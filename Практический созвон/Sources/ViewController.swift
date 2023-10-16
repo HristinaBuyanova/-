@@ -66,6 +66,7 @@ class ViewController: UIViewController {
         let button = UIButton()
         button.backgroundColor = UIColor(named: "PinkButton")
         button.setTitle("I'm interested", for: .normal)
+        button.titleLabel?.font = UIFont(name: "GTWalsheimPro-Regular", size: 14)
         button.clipsToBounds = true
         button.layer.cornerRadius = 10
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -110,29 +111,29 @@ class ViewController: UIViewController {
         }
 
         squareShadow.snp.makeConstraints { make in
-            make.centerX.equalTo(view)
+//            make.centerX.equalTo(view)
             make.left.equalTo(view).offset(15)
             make.right.equalTo(view).offset(-15)
-            make.top.equalTo(view).offset(511)
+            make.top.equalTo(picture.snp.bottom).offset(142)
             make.bottom.equalTo(view).offset(-31)
 //            make.height.equalTo(270)
 //            make.width.equalTo(345)
         }
 
         bigLabel.snp.makeConstraints { make in
-            make.center.equalTo(view)
+//            make.center.equalTo(view)
             make.left.equalTo(squareShadow).offset(83.5)
             make.right.equalTo(squareShadow).offset(-82.5)
             make.top.equalTo(squareShadow).offset(34.5)
-            make.bottom.equalTo(squareShadow).offset(-207.5)
+//            make.bottom.equalTo(squareShadow).offset(-207.5)
         }
 
         smallLabel.snp.makeConstraints { make in
-            make.center.equalTo(view)
+//            make.center.equalTo(view)
             make.left.equalTo(squareShadow).offset(29)
             make.right.equalTo(squareShadow).offset(-29)
             make.top.equalTo(squareShadow).offset(80.5)
-            make.bottom.equalTo(squareShadow).offset(-143.5)
+//            make.bottom.equalTo(squareShadow).offset(-143.5)
         }
 
         button.snp.makeConstraints { make in
