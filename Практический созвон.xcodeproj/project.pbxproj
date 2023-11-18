@@ -41,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E27B4E62B08C05E00EFF769 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				6E5E36CD2ADA8AB700F4D6FB /* ViewController.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
 		6E2EC4FF2ADA8E38006697D2 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -53,7 +61,7 @@
 		6E2EC5002ADA8E62006697D2 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				6E5E36CD2ADA8AB700F4D6FB /* ViewController.swift */,
+				6E27B4E62B08C05E00EFF769 /* Onboarding */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
