@@ -17,7 +17,7 @@ class SettingsCell: UITableViewCell {
                 customTitleLabel.text = model?.title
                 customDiscriptionLabel.text = model?.discription
                 customVerLabel.text = model?.label
-                
+                customSwitch.isHidden = ((model?.isSwitch) == nil)
             }
         }
 
@@ -25,23 +25,24 @@ class SettingsCell: UITableViewCell {
 
         private lazy var customView: UIView = {
             let view = UIView()
-            view.layer.cornerRadius = 150
-            view.backgroundColor = .systemGray4
-//            view.translatesAutoresizingMaskIntoConstraints = false
+            view.layer.cornerRadius = 25
+            view.backgroundColor = .systemGray6
+            view.translatesAutoresizingMaskIntoConstraints = false
             return view
         }()
 
         private lazy var customImageView: UIImageView = {
             let imageView = UIImageView()
+            imageView.tintColor = .systemGray4
             imageView.contentMode = .scaleAspectFit
-//            imageView.translatesAutoresizingMaskIntoConstraints = false
+            imageView.translatesAutoresizingMaskIntoConstraints = false
             return imageView
         }()
 
         private lazy var customTitleLabel: UILabel = {
             let label = UILabel()
             label.textAlignment = .left
-            label.font = UIFont(name: "GTWalsheimPro-Bold", size: 16)
+            label.font = UIFont(name: "GTWalsheimPro-Bold", size: 18)
             label.translatesAutoresizingMaskIntoConstraints = false
             return label
         }()
@@ -49,16 +50,18 @@ class SettingsCell: UITableViewCell {
     private lazy var customDiscriptionLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
+        label.textColor = .systemGray2
         label.font = UIFont(name: "GTWalsheimPro-Regular", size: 12)
-//        label.translatesAutoresizingMaskIntoConstraints = false
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
 
     private lazy var customVerLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .right
+        label.textColor = .systemGray2
         label.font = UIFont(name: "GTWalsheimPro-Regular", size: 12)
-//        label.translatesAutoresizingMaskIntoConstraints = false
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
 
@@ -75,9 +78,7 @@ class SettingsCell: UITableViewCell {
             view.padding = 0
             view.thumbInPadding = 5
         view.thumbOnTintColor = UIColor(named: "PinkButton") ?? .systemPink
-        if model?.isSwitch != nil {
-            view.isOn = model?.isSwitch ?? true
-        }
+        view.isOn = model?.isSwitch ?? true
             return view
         }()
 
@@ -102,36 +103,59 @@ class SettingsCell: UITableViewCell {
         }
 
     private func setupLayout() {
-        customView.snp.makeConstraints { make in
-            make.leading.equalToSuperview()
-            make.centerX.equalToSuperview()
-            make.height.width.equalTo(48)
-        }
 
-        customImageView.snp.makeConstraints { make in
-            make.centerX.centerY.equalTo(customView)
-            make.width.height.equalTo(24)
-        }
+    NSLayoutConstraint.activate([
+                customView.leadingAnchor.constraint(equalTo: leadingAnchor),
+                customView.centerYAnchor.constraint(equalTo: centerYAnchor),
+                customView.heightAnchor.constraint(equalToConstant: 48),
+                customView.widthAnchor.constraint(equalToConstant: 48),
 
-        customTitleLabel.snp.makeConstraints { make in
-            make.trailing.equalTo(customView).inset(19)
-            make.centerY.equalToSuperview().offset(-5)
-        }
+                customImageView.centerYAnchor.constraint(equalTo: customView.centerYAnchor),
+                customImageView.centerXAnchor.constraint(equalTo: customView.centerXAnchor),
+                customImageView.heightAnchor.constraint(equalToConstant: 24),
 
-        customDiscriptionLabel.snp.makeConstraints { make in
-            make.trailing.equalTo(customView).inset(19)
-            make.centerY.equalToSuperview().offset(5)
-        }
+                customTitleLabel.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -10),
+                customTitleLabel.leadingAnchor.constraint(equalTo: customView.trailingAnchor, constant: 19),
 
-        customSwitch.snp.makeConstraints { make in
-            make.leading.equalToSuperview()
-            make.centerY.equalToSuperview()
-        }
+                customDiscriptionLabel.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 20),
+                customDiscriptionLabel.leadingAnchor.constraint(equalTo: customView.trailingAnchor, constant: 19),
 
-        customVerLabel.snp.makeConstraints { make in
-            make.leading.equalToSuperview()
-            make.centerY.equalToSuperview().offset(-5)
-        }
+                customSwitch.centerYAnchor.constraint(equalTo: centerYAnchor),
+                customSwitch.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -50),
+
+                customVerLabel.bottomAnchor.constraint(equalTo: customTitleLabel.bottomAnchor),
+                customVerLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20)
+                ])
+//        customView.snp.makeConstraints { make in
+//            make.leading.equalTo(snp.leading)
+//            make.centerY.equalTo(snp.centerY)
+//            make.height.width.equalTo(48)
+//        }
+//
+//        customImageView.snp.makeConstraints { make in
+//            make.centerX.centerY.equalTo(customView)
+//            make.width.height.equalTo(24)
+//        }
+//
+//        customTitleLabel.snp.makeConstraints { make in
+//            make.trailing.equalTo(customView).inset(19)
+//            make.centerY.equalToSuperview().offset(-5)
+//        }
+//
+//        customDiscriptionLabel.snp.makeConstraints { make in
+//            make.trailing.equalTo(customView).inset(19)
+//            make.centerY.equalToSuperview().offset(5)
+//        }
+//
+//        customSwitch.snp.makeConstraints { make in
+//            make.leading.equalToSuperview()
+//            make.centerY.equalToSuperview()
+//        }
+//
+//        customVerLabel.snp.makeConstraints { make in
+//            make.leading.equalToSuperview()
+//            make.centerY.equalToSuperview().offset(-5)
+//        }
 
         }
 

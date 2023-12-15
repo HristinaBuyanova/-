@@ -51,7 +51,6 @@ class SettingViewController: UIViewController {
         return view
     }()
 
-
     private lazy var bigLabel: UILabel = {
         let label = UILabel()
         label.text = "Turn on notification"
@@ -78,7 +77,9 @@ class SettingViewController: UIViewController {
             let tableView = UITableView(frame: .zero, style: .insetGrouped)
             tableView.register(SettingsCell.self, forCellReuseIdentifier: SettingsCell.identifier)
             tableView.dataSource = self
+            tableView.translatesAutoresizingMaskIntoConstraints = false
             tableView.delegate = self
+            tableView.backgroundColor = .white
             return tableView
         }()
 
@@ -88,7 +89,6 @@ class SettingViewController: UIViewController {
         setupView()
         setupHierrarchy()
         setupLayout()
-
     }
 
     // MARK: - Setup
@@ -100,7 +100,6 @@ class SettingViewController: UIViewController {
         navigationController?.navigationBar.tintColor = .black
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black, .font: UIFont(name: "GTWalsheimPro-Bold", size: 24) ?? ""]
         navigationController?.navigationBar.backItem?.title = ""
-
     }
 
     private func setupHierrarchy() {
@@ -118,7 +117,6 @@ class SettingViewController: UIViewController {
             make.top.equalTo(view)
             make.leading.trailing.equalTo(view)
             make.height.equalTo(116)
-
         }
         pinkView.snp.makeConstraints { make in
             make.top.equalTo(whiteView.snp.bottom)
@@ -148,9 +146,10 @@ class SettingViewController: UIViewController {
         }
 
         tableView.snp.makeConstraints { make in
-            make.leading.equalTo(view.snp.leading).inset(25)
-            make.trailing.equalTo(view.snp.trailing).inset(25)
-            make.top.equalTo(pinkView.snp.bottom).inset(40)
+            make.leading.equalTo(view.snp.leading)
+            make.trailing.equalTo(view.snp.trailing)
+            make.top.equalTo(view.snp.top).offset(215)
+            make.bottom.equalTo(view.snp.bottom)
         }
 
     }
@@ -159,24 +158,41 @@ class SettingViewController: UIViewController {
 
 // MARK: - Extension
 
-extension SettingViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            tableView.deselectRow(at: indexPath, animated: true)
-            let modelData = model[indexPath.row]
-            print("Нажата ячейка \(modelData.title)")
-        }
-}
+//extension SettingViewController: UITableViewDelegate {
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//            tableView.deselectRow(at: indexPath, animated: true)
+//            let modelData = model[indexPath.row]
+//            print("Нажата ячейка \(modelData.title)")
+//        }
+//}
 
 extension SettingViewController: UITableViewDataSource {
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         model.count
     }
-    
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        1
+    }
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let modelData = model[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: SettingsCell.identifier, for: indexPath) as? SettingsCell
         cell?.model = modelData
         return cell ?? UITableViewCell()
+    }
+}
+
+extension SettingViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        80
+    }
+
+        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            tableView.deselectRow(at: indexPath, animated: true)
+
     }
 }
 
