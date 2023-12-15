@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E27B4E92B08C2E100EFF769 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E27B4E82B08C2E100EFF769 /* SettingViewController.swift */; };
+		6E27B4EB2B08CD0C00EFF769 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E27B4EA2B08CD0C00EFF769 /* SettingsCell.swift */; };
+		6E27B4ED2B08CD3300EFF769 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E27B4EC2B08CD3300EFF769 /* Model.swift */; };
+		6E27B4EF2B0A155200EFF769 /* CustomSwitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E27B4EE2B0A155200EFF769 /* CustomSwitchView.swift */; };
 		6E2EC4FE2ADA8CD5006697D2 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6E2EC4FD2ADA8CD5006697D2 /* SnapKit */; };
 		6E3CDFC42ADAEA650066FB90 /* GTWalsheimPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E3CDFC32ADAEA650066FB90 /* GTWalsheimPro-Regular.ttf */; };
 		6E3CDFC62ADAEA7F0066FB90 /* GTWalsheimPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E3CDFC52ADAEA7F0066FB90 /* GTWalsheimPro-Bold.ttf */; };
@@ -18,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6E27B4E82B08C2E100EFF769 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		6E27B4EA2B08CD0C00EFF769 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
+		6E27B4EC2B08CD3300EFF769 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		6E27B4EE2B0A155200EFF769 /* CustomSwitchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSwitchView.swift; sourceTree = "<group>"; };
 		6E3CDFC32ADAEA650066FB90 /* GTWalsheimPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GTWalsheimPro-Regular.ttf"; sourceTree = "<group>"; };
 		6E3CDFC52ADAEA7F0066FB90 /* GTWalsheimPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GTWalsheimPro-Bold.ttf"; sourceTree = "<group>"; };
 		6E5E36C62ADA8AB700F4D6FB /* Практический созвон.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Практический созвон.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +57,17 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
+		6E27B4E72B08C26A00EFF769 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				6E27B4E82B08C2E100EFF769 /* SettingViewController.swift */,
+				6E27B4EA2B08CD0C00EFF769 /* SettingsCell.swift */,
+				6E27B4EC2B08CD3300EFF769 /* Model.swift */,
+				6E27B4EE2B0A155200EFF769 /* CustomSwitchView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		6E2EC4FF2ADA8E38006697D2 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +80,7 @@
 		6E2EC5002ADA8E62006697D2 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				6E27B4E72B08C26A00EFF769 /* Settings */,
 				6E27B4E62B08C05E00EFF769 /* Onboarding */,
 			);
 			path = Sources;
@@ -193,6 +213,10 @@
 				6E5E36CE2ADA8AB700F4D6FB /* ViewController.swift in Sources */,
 				6E5E36CA2ADA8AB700F4D6FB /* AppDelegate.swift in Sources */,
 				6E5E36CC2ADA8AB700F4D6FB /* SceneDelegate.swift in Sources */,
+				6E27B4EF2B0A155200EFF769 /* CustomSwitchView.swift in Sources */,
+				6E27B4ED2B08CD3300EFF769 /* Model.swift in Sources */,
+				6E27B4E92B08C2E100EFF769 /* SettingViewController.swift in Sources */,
+				6E27B4EB2B08CD0C00EFF769 /* SettingsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

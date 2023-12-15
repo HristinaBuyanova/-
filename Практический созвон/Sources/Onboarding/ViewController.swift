@@ -69,6 +69,7 @@ class ViewController: UIViewController {
         button.titleLabel?.font = UIFont(name: "GTWalsheimPro-Regular", size: 14)
         button.clipsToBounds = true
         button.layer.cornerRadius = 10
+        button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -80,6 +81,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        navigationItem.backButtonTitle = ""
         setupView()
         setupHierrarchy()
         setupLayout()
@@ -87,7 +89,7 @@ class ViewController: UIViewController {
 
     // MARK: - Setup
     private func setupView() {
-
+        
     }
 
     private func setupHierrarchy() {
@@ -151,6 +153,15 @@ class ViewController: UIViewController {
     }
 
     // MARK: - Actions
+
+    @objc
+    func buttonPressed() {
+        let VC = SettingViewController()
+        if let navigator = navigationController{
+            navigator.pushViewController(VC, animated: true)
+        }
+
+    }
 
     // MARK: - Extension
 

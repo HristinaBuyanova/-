@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "ilter_hdr.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
