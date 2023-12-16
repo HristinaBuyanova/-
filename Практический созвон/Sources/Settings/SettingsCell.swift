@@ -77,6 +77,8 @@ class SettingsCell: UITableViewCell {
             view.thumbSize = .init(width: 30, height: 30)
             view.padding = 0
             view.thumbInPadding = 5
+        view.thumbBackgroundColor = .systemGray6
+//        view.addTarget(self, action: #selector(switchValueChanged(_:)), for: .valueChanged)
         view.thumbOnTintColor = UIColor(named: "PinkButton") ?? .systemPink
         view.isOn = model?.isSwitch ?? true
             return view
@@ -121,7 +123,9 @@ class SettingsCell: UITableViewCell {
                 customDiscriptionLabel.leadingAnchor.constraint(equalTo: customView.trailingAnchor, constant: 19),
 
                 customSwitch.centerYAnchor.constraint(equalTo: centerYAnchor),
-                customSwitch.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -50),
+                customSwitch.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -25),
+                customSwitch.heightAnchor.constraint(equalToConstant: 30),
+                customSwitch.widthAnchor.constraint(equalToConstant: 50),
 
                 customVerLabel.bottomAnchor.constraint(equalTo: customTitleLabel.bottomAnchor),
                 customVerLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20)
@@ -158,5 +162,6 @@ class SettingsCell: UITableViewCell {
 //        }
 
         }
+
 
 }
